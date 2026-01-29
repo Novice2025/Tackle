@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tackle – Business English for Brazilians | NEXTATION Style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Learn how to use the verb 'tackle' in professional English – for addressing problems, tasks, and challenges head-on, with a Brazilian touch."
+  />
+
+  <!-- Base reset + fonts -->
+  <style>
+    /* Basic CSS Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Montserrat", sans-serif;
+      background: radial-gradient(circle at top, #1c1f3b 0%, #050716 45%, #02030b 100%);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* NEXTATION colour tokens (from PDFs) */
+    :root {
+      --bg-main: #02030b;
+      --bg-gradient: radial-gradient(circle at top, #1c1f3b 0%, #050716 45%, #02030b 100%);
+      --card-bg: rgba(15, 18, 40, 0.92);
+      --card-soft-bg: rgba(18, 21, 50, 0.88);
+      --accent-cyan: #4ef2ff;
+      --accent-pink: #ff2f92;
+      --accent-green: #4dff9b;
+      --accent-yellow: #ffe25f;
+      --accent-purple: #aa5dff;
+      --muted: rgba(255,255,255,0.65);
+      --border-glow: rgba(120,120,255,0.45);
+      --shadow-strong: 0 0 36px rgba(130,80,255,0.6);
+      --shadow-soft: 0 0 20px rgba(0,0,0,0.65);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --transition-fast: 0.18s ease-out;
+      --transition-med: 0.28s ease-out;
+    }
+
+    /* Layout */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #00f5ff, #ff2f92, #ffe25f, #4dff9b);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+      z-index: 10;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 70px auto 40px auto;
+      padding: 0 18px 40px 18px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .orb {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 20%, #ffffff, transparent 60%),
+        radial-gradient(circle at 70% 80%, #00fff0, transparent 55%),
+        radial-gradient(circle at 50% 50%, #ff2f92, transparent 65%);
+      box-shadow:
+        0 0 20px rgba(0,255,255,0.7),
+        0 0 28px rgba(255,0,160,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .orb::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: conic-gradient(
+        from 0deg,
+        rgba(78, 242, 255, 0.28),
+        rgba(255, 47, 146, 0.3),
+        transparent 40%,
+        transparent 100%
+      );
+      animation: orbit 7s linear infinite;
+      mix-blend-mode: screen;
+    }
+
+    @keyframes orbit {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .header-text h1 {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      background: linear-gradient(90deg, #4ef2ff, #ff2f92);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-text h2 {
+      margin-top: 4px;
+      font-size: 1.5rem;
+      color: var(--accent-cyan);
+      text-shadow: 0 0 12px rgba(78, 242, 255, 0.5);
+    }
+
+    .header-text p {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* Added the Daby Lego Disruptive Chain Method 4 Professionals line */
+    .header-text .tagline {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: var(--accent-green);
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    .pill {
+      margin-left: auto;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        rgba(8,235,255,0.25),
+        rgba(255,0,168,0.20)
+      );
+      border: 1px solid rgba(142,255,255,0.4);
+      font-size: 0.75rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .pill span.badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 9px rgba(77, 255, 179, 0.9);
+    }
+
+    /* Sections baseline */
+    section {
+      margin-top: 22px;
+      padding: 20px 18px 22px 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(13,16,40,0.98), rgba(6,8,26,0.98));
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(120,120,255,0.32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -40px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(87,57,255,0.35), transparent 58%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    section h3 {
+      position: relative;
+      z-index: 1;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    section h4 {
+      position: relative;
+      z-index: 1;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    section p,
+    section ul,
+    section li {
+      position: relative;
+      z-index: 1;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+
+    section .subtitle {
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+    }
+
+    /* Specific spacing for Part 2 points */
+    .part2-point {
+      margin-bottom: 24px; /* This creates the desired two-line space */
+    }
+    .part2-point:last-of-type {
+      margin-bottom: 0; /* No extra space after the last point */
+    }
+
+
+    /* Different colours for each part to separate visually */
+    #expression {
+      border-color: rgba(78,242,255,0.7);
+    }
+    #expression h3 {
+      color: var(--accent-cyan);
+    }
+
+    #when-to-use {
+      border-color: rgba(255,47,146,0.7);
+    }
+    #when-to-use h3 {
+      color: var(--accent-pink);
+    }
+
+    #scenarios {
+      border-color: rgba(170,93,255,0.8);
+    }
+    #scenarios h3 {
+      color: var(--accent-purple);
+    }
+
+    #exercises {
+      border-color: rgba(77,255,155,0.7);
+    }
+    #exercises h3 {
+      color: var(--accent-green);
+    }
+
+    #vocabulary {
+      border-color: rgba(255,226,95,0.7);
+    }
+    #vocabulary h3 {
+      color: var(--accent-yellow);
+    }
+
+    /* Highlighted text */
+    .highlight {
+      color: var(--accent-cyan);
+      text-shadow: 0 0 8px rgba(78, 242, 255, 0.4);
+      font-weight: 600;
+    }
+
+    .highlight-pink {
+      color: var(--accent-pink);
+      text-shadow: 0 0 8px rgba(255, 47, 146, 0.4);
+      font-weight: 600;
+    }
+
+    .highlight-green {
+      color: var(--accent-green);
+      text-shadow: 0 0 8px rgba(77, 255, 155, 0.4);
+      font-weight: 600;
+    }
+
+    .highlight-yellow {
+      color: var(--accent-yellow);
+      text-shadow: 0 0 8px rgba(255, 226, 95, 0.4);
+      font-weight: 600;
+    }
+
+    .highlight-purple {
+      color: var(--accent-purple);
+      text-shadow: 0 0 8px rgba(170, 93, 255, 0.4);
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+      color: var(--bg-main);
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--card-soft-bg);
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(78, 242, 255, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .buttons-row {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Textarea & Counters */
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(78, 242, 255, 0.4);
+      background-color: rgba(15, 18, 40, 0.7);
+      color: #ffffff;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      resize: vertical;
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: border-color var(--transition-fast);
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      box-shadow: inset 0 0 12px rgba(78, 242, 255, 0.2), 0 0 10px rgba(78, 242, 255, 0.3);
+    }
+
+    .char-counter {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    /* Scenario Cards */
+    .scenarios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .scenario-card {
+      background: var(--card-soft-bg);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid rgba(170,93,255,0.4);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .scenario-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent-purple);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+
+    .scenario-emoji {
+      font-size: 1.3rem;
+    }
+
+    .scenario-example {
+      background-color: rgba(0,0,0,0.2);
+      border-left: 3px solid var(--accent-purple);
+      padding: 10px 15px;
+      border-radius: var(--radius-sm);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.95);
+      white-space: pre-wrap; /* Ensures line breaks are respected */
+    }
+
+    .scenario-context {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .scenario-pt {
+      font-size: 0.88rem;
+      color: var(--accent-yellow);
+      font-weight: 500;
+    }
+
+    .you {
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+
+    /* Exercise Blocks */
+    .exercise-block {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 25px;
+      margin-top: 20px;
+      border: 1px solid rgba(77,255,155,0.4);
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .exercise-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--accent-green);
+      margin-bottom: 10px;
+    }
+
+    .exercise-instruction {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    /* Feedback Messages */
+    .feedback-message {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: none; /* Hidden by default */
+      line-height: 1.5;
+    }
+
+    .feedback-correct {
+      background-color: rgba(77, 255, 155, 0.15);
+      border: 1px solid var(--accent-green);
+      color: var(--accent-green);
+      box-shadow: 0 0 10px rgba(77, 255, 155, 0.4);
+    }
+
+    .feedback-incorrect {
+      background-color: rgba(255, 47, 146, 0.15);
+      border: 1px solid var(--accent-pink);
+      color: var(--accent-pink);
+      box-shadow: 0 0 10px rgba(255, 47, 146, 0.4);
+    }
+
+    .feedback-tip {
+      background-color: rgba(78, 242, 255, 0.15);
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      box-shadow: 0 0 10px rgba(78, 242, 255, 0.4);
+    }
+
+    /* Vocabulary Section */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .vocab-item {
+      background: var(--card-soft-bg);
+      border-radius: var(--radius-sm);
+      padding: 15px;
+      border: 1px solid rgba(255,226,95,0.4);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .vocab-term {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 700;
+      color: var(--accent-yellow);
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .vocab-def {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 5px;
+    }
+
+    .vocab-pt {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <main class="page">
+    <header class="header">
+      <div class="orb"></div>
+      <div class="header-text">
+        <h1>NEXTATION</h1>
+        <h2>Tackle: Master this Verb in Business English</h2>
+        <p>
+          Aprenda a usar o verbo "tackle" em contextos profissionais – para resolver problemas, abordar tarefas e enfrentar desafios de frente, com um toque brasileiro.
+        </p>
+        <p class="tagline">Daby Lego Disruptive Chain Method 4 Professionals</p>
+      </div>
+      <div class="pill">
+        <span class="badge-dot"></span>
+        Lesson Active
+      </div>
+    </header>
+
+    <!-- Section 1: Expression -->
+    <section id="expression">
+      <h3>Part 1 · The Expression</h3>
+      <h4>What does "tackle" mean in business?</h4>
+      <p>
+        The verb <span class="highlight">"tackle"</span> means to deal with or make a determined effort to deal with a problem or difficult task. It implies a proactive, direct, and often energetic approach to a challenge.
+      </p>
+      <p>
+        Think of it as "enfrentar," "abordar," or "resolver" a situação de forma ativa e com foco. It's a powerful verb that conveys competence and initiative.
+      </p>
+      <div class="buttons-row">
+        <button class="btn-secondary" type="button" onclick="playBottleneck()">
+          🔊 Listen 'tackle'
+        </button>
+      </div>
+    </section>
+
+    <!-- Section 2: When & how to use it -->
+    <section id="when-to-use">
+      <h3>Part 2 · When & how to use it</h3>
+      <h4>Professional contexts where Brazilians need this verb.</h4>
+
+      <p class="part2-point">
+        Em português, somos muito diretos: “vamos resolver o problema”, “precisamos ver isso”, “temos que cuidar dessa questão”. Em inglês, "tackle" eleva essa intenção a um nível mais profissional e estratégico.
+      </p>
+
+      <p class="part2-point">
+        Use <span class="highlight-pink">“tackle”</span> quando você quer:
+      </p>
+
+      <p class="part2-point">
+        <span class="highlight-pink">Mostrar proatividade e liderança:</span> Em vez de apenas "solve a problem," você "tackle a problem," indicando que está tomando a iniciativa e se dedicando a ele.
+      </p>
+
+      <p class="part2-point">
+        <span class="highlight-pink">Abordar desafios complexos:</span> Para problemas que exigem mais do que uma solução simples, "tackle" sugere uma abordagem mais robusta e multifacetada.
+      </p>
+
+      <p class="part2-point">
+        <span class="highlight-pink">Falar sobre tarefas ou projetos difíceis:</span> Quando há um projeto grande ou uma tarefa complicada pela frente, "tackle" é a palavra perfeita para expressar o ato de começar a trabalhar nela com seriedade.
+      </p>
+
+      <p class="part2-point">
+        <span class="highlight-pink">Evitar a passividade:</span> Em vez de esperar que um problema se resolva sozinho, "tackle" mostra que você está agindo ativamente para superá-lo.
+      </p>
+
+      <p class="part2-point">
+        <span class="highlight-pink">O “jeitinho” profissional:</span> "Tackle" é o equivalente profissional de "dar um jeito" ou "pegar para resolver" do português corporativo. É a forma educada e madura de dizer que algo será enfrentado com determinação – sem drama, sem culpa, só ação.
+      </p>
+    </section>
+
+    <!-- Section 3: Scenarios -->
+    <section id="scenarios">
+      <h3>Part 3 · Real-world scenarios</h3>
+      <h4>See "tackle" in action in common business situations.</h4>
+      <div class="scenarios-grid">
+        <!-- Scenario 1: Complex Problem -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">🚨</span> Complex Problem
+          </div>
+          <p class="scenario-example">
+            <span class="you">Meeting discussion:</span><br />
+            “We need to <span class="highlight">tackle</span> the declining sales figures head-on before they impact our annual targets.”
+          </p>
+          <p class="scenario-context">
+            When a problem is significant and requires a direct, comprehensive approach.
+          </p>
+          <p class="scenario-pt">
+            “Precisamos enfrentar a queda nas vendas de frente.”
+          </p>
+        </article>
+
+        <!-- Scenario 2: New Project -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">🚀</span> New Project Launch
+          </div>
+          <p class="scenario-example">
+            <span class="you">Project kick-off:</span><br />
+            “Our team is ready to <span class="highlight">tackle</span> the new software implementation project starting next week.”
+          </p>
+          <p class="scenario-context">
+            To indicate starting a new, often challenging, project or task with enthusiasm.
+          </p>
+          <p class="scenario-pt">
+            “Nossa equipe está pronta para abordar o novo projeto de implementação de software.”
+          </p>
+        </article>
+
+        <!-- Scenario 3: Difficult Conversation -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">🗣️</span> Difficult Conversation
+          </div>
+          <p class="scenario-example">
+            <span class="you">HR discussion:</span><br />
+            “I need to <span class="highlight">tackle</span> the issue of low team morale with the department head.”
+          </p>
+          <p class="scenario-context">
+            For addressing sensitive or uncomfortable topics directly and constructively.
+          </p>
+          <p class="scenario-pt">
+            “Preciso abordar a questão da baixa moral da equipe com o chefe do departamento.”
+          </p>
+        </article>
+
+        <!-- Scenario 4: Overcoming Obstacles -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">🚧</span> Overcoming Obstacles
+          </div>
+          <p class="scenario-example">
+            <span class="you">Strategy meeting:</span><br />
+            “We have several regulatory hurdles to <span class="highlight">tackle</span> before we can launch in the new market.”
+          </p>
+          <p class="scenario-context">
+            When facing barriers or challenges that need to be overcome.
+          </p>
+          <p class="scenario-pt">
+            “Temos vários obstáculos regulatórios para enfrentar antes de lançar no novo mercado.”
+          </p>
+        </article>
+
+        <!-- Scenario 5: Personal Development -->
+        <article class="scenario-card">
+          <div class="scenario-title">
+            <span class="scenario-emoji">🧠</span> Personal Development
+          </div>
+          <p class="scenario-example">
+            <span class="you">Performance review:</span><br />
+            “To improve, I plan to <span class="highlight">tackle</span> my time management skills by taking a course.”
+          </p>
+          <p class="scenario-context">
+            Can also be used for personal challenges or areas for improvement.
+          </p>
+          <p class="scenario-pt">
+            “Para melhorar, pretendo abordar minhas habilidades de gerenciamento de tempo.”
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Participative exercises -->
+    <section id="exercises">
+      <h3>Part 4 · Participative practice</h3>
+      <h4>Write, speak, and feel comfortable using “tackle”</h4>
+
+      <!-- Exercise 1: Email writing -->
+      <div class="exercise-block">
+        <div class="exercise-title">Exercise 1 · Email about a challenging task</div>
+        <p class="exercise-instruction">
+          Imagine you are a project manager. You've just been assigned a new, complex task that requires immediate attention.
+          Write a short email (4–6 lines) to your team, using
+          <span class="highlight">“tackle”</span> at least once to show your proactive approach.
+        </p>
+        <p class="exercise-instruction" style="font-size:0.88rem; color:var(--muted);">
+          Hint in Portuguese: você pode começar com “We need to tackle…” ou “I will tackle…”.
+        </p>
+        <textarea id="ex1" placeholder="Type your email here in English..."></textarea>
+        <div class="char-counter" id="ex1-counter">0 characters</div>
+        <div class="buttons-row">
+          <button class="btn-primary" type="button" onclick="checkExercise1()">
+            Check my email
+          </button>
+        </div>
+        <div id="ex1-feedback" class="feedback-message"></div>
+      </div>
+
+      <!-- Exercise 2: Meetings phrases -->
+      <div class="exercise-block">
+        <div class="exercise-title">Exercise 2 · Phrases for meetings</div>
+        <p class="exercise-instruction">
+          Below are four Brazilian-style situations. For each, say out loud a sentence with “tackle”.
+          If you want, write it down to fix it in your memory.
+        </p>
+        <ul style="margin-top:6px; padding-left:18px;">
+          <li>1. Um problema de performance urgente no sistema.</li>
+          <li>2. A necessidade de melhorar a comunicação interna.</li>
+          <li>3. Um objetivo ambicioso de vendas para o próximo trimestre.</li>
+          <li>4. Uma reclamação difícil de um cliente importante.</li>
+        </ul>
+        <textarea id="ex2" placeholder="Type your phrases here in English..."></textarea>
+        <div class="char-counter" id="ex2-counter">0 characters</div>
+        <div class="buttons-row">
+          <button class="btn-primary" type="button" onclick="checkExercise2()">
+            Check my phrases
+          </button>
+        </div>
+        <div id="ex2-feedback" class="feedback-message"></div>
+      </div>
+
+      <!-- Exercise 3: Tone in meetings & calls -->
+      <div class="exercise-block">
+        <div class="exercise-title">Exercise 3 · Tone in meetings & calls</div>
+        <p class="exercise-instruction">
+          How would you say "We need to tackle this issue immediately" with a confident, yet collaborative tone?
+          Practice saying it out loud. Focus on clear pronunciation and a firm, but open, delivery.
+        </p>
+        <p class="exercise-instruction" style="font-size:0.88rem; color:var(--muted);">
+          Dica: Evite soar agressivo. O objetivo é inspirar ação, não pânico.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Vocabulary Reference -->
+    <section id="vocabulary">
+      <h3>Part 5 · Vocabulary Reference</h3>
+      <h4>Key business terms used in this lesson.</h4>
+      <div class="vocab-grid">
+        <div class="vocab-item">
+          <div class="vocab-term">declining sales figures</div>
+          <div class="vocab-def">
+            A reduction in the amount of products or services sold.
+          </div>
+          <div class="vocab-pt">
+            queda nos números de vendas.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">annual targets</div>
+          <div class="vocab-def">
+            Goals or objectives set for a company or department to achieve within a year.
+          </div>
+          <div class="vocab-pt">
+            metas anuais.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">software implementation</div>
+          <div class="vocab-def">
+            The process of installing and configuring new software for use.
+          </div>
+          <div class="vocab-pt">
+            implementação de software.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">team morale</div>
+          <div class="vocab-def">
+            The confidence, enthusiasm, and discipline of a group of people at a particular time.
+          </div>
+          <div class="vocab-pt">
+            moral da equipe.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">department head</div>
+          <div class="vocab-def">
+            The person in charge of a specific department within an organization.
+          </div>
+          <div class="vocab-pt">
+            chefe de departamento.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">regulatory hurdles</div>
+          <div class="vocab-def">
+            Obstacles or difficulties related to government rules and laws.
+          </div>
+          <div class="vocab-pt">
+            obstáculos regulatórios.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">time management skills</div>
+          <div class="vocab-def">
+            The ability to use one's time effectively or productively, especially at work.
+          </div>
+          <div class="vocab-pt">
+            habilidades de gerenciamento de tempo.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">urgent performance issue</div>
+          <div class="vocab-def">
+            A critical problem affecting how well a system or process functions, requiring immediate attention.
+          </div>
+          <div class="vocab-pt">
+            problema de performance urgente.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">internal communication</div>
+          <div class="vocab-def">
+            The exchange of information and ideas within an organization.
+          </div>
+          <div class="vocab-pt">
+            comunicação interna.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">ambitious sales target</div>
+          <div class="vocab-def">
+            A challenging and high goal for sales to be achieved.
+          </div>
+          <div class="vocab-pt">
+            meta de vendas ambiciosa.
+          </div>
+        </div>
+
+        <div class="vocab-item">
+          <div class="vocab-term">difficult client complaint</div>
+          <div class="vocab-def">
+            A challenging or sensitive grievance from an important customer.
+          </div>
+          <div class="vocab-pt">
+            reclamação difícil de cliente.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Created for Brazilian professionals to feel confident using
+      <span class="highlight">“tackle”</span> in real business English.
+    </footer>
+  </main>
+
+  <!-- Small JS for sound + char counters + answer checking -->
+  <script>
+    // Function to play "tackle" sound
+    function playBottleneck() { // Renamed from playExperience to playBottleneck, but should be playTackle
+      if (!("speechSynthesis" in window)) {
+        alert("SpeechSynthesis is not supported in this browser.");
+        return;
+      }
+      const utter = new SpeechSynthesisUtterance("tackle");
+      utter.lang = "en-US";
+      speechSynthesis.speak(utter);
+    }
+
+    // Function to set up character counters for textareas
+    function setupCounter(textareaId, counterId) {
+      const ta = document.getElementById(textareaId);
+      const counter = document.getElementById(counterId);
+      if (!ta || !counter) return;
+      ta.addEventListener("input", () => {
+        counter.textContent = ta.value.length + " characters";
+      });
+    }
+
+    // Call setupCounter for both exercise textareas
+    setupCounter("ex1", "ex1-counter");
+    setupCounter("ex2", "ex2-counter");
+
+    // Function to display feedback
+    function showFeedback(elementId, message, type) {
+      const feedbackDiv = document.getElementById(elementId);
+      feedbackDiv.textContent = message;
+      feedbackDiv.className = `feedback-message feedback-${type}`; // Apply styling based on type
+      feedbackDiv.style.display = "block"; // Make it visible
+    }
+
+    // --- Exercise 1: Email about a challenging task ---
+    function checkExercise1() {
+      const emailText = document.getElementById("ex1").value.toLowerCase();
+      const feedbackId = "ex1-feedback";
+
+      const hasTackle = emailText.includes("tackle") || emailText.includes("tackling") || emailText.includes("tackled");
+      const hasContext = emailText.includes("issue") || emailText.includes("problem") || emailText.includes("challenge") || emailText.includes("task") || emailText.includes("project");
+      const isLongEnough = emailText.length > 50;
+
+      if (hasTackle && hasContext && isLongEnough) {
+        showFeedback(
+          feedbackId,
+          "Excellent! You've used 'tackle' effectively in a business context. Your email sounds professional and proactive. Keep up the great work!",
+          "correct"
+        );
+      } else if (hasTackle && isLongEnough) {
+        showFeedback(
+          feedbackId,
+          "Good start! You've used 'tackle'. Now, try to make sure the context clearly describes a problem, task, or challenge.",
+          "tip"
+        );
+      } else if (!hasTackle && isLongEnough) {
+        showFeedback(
+          feedbackId,
+          "Not quite there. Remember to include 'tackle' (or its forms like 'tackling', 'tackled') in your email. It's key for professional communication about addressing issues!",
+          "incorrect"
+        );
+      } else {
+        showFeedback(
+          feedbackId,
+          "Please write a bit more. Your email should be at least 4–6 lines long to fully describe the situation and use 'tackle' naturally.",
+          "tip"
+        );
+      }
+    }
+
+    // --- Exercise 2: Phrases for meetings ---
+    function checkExercise2() {
+      const phrasesText = document.getElementById("ex2").value.toLowerCase();
+      const feedbackId = "ex2-feedback";
+
+      const hasTackle = phrasesText.includes("tackle") || phrasesText.includes("tackling") || phrasesText.includes("tackled");
+      const hasPerformanceIssue = phrasesText.includes("performance") && phrasesText.includes("issue") && phrasesText.includes("system");
+      const hasCommunicationImprovement = phrasesText.includes("communication") && phrasesText.includes("improve");
+      const hasSalesTarget = phrasesText.includes("sales") && phrasesText.includes("target") && phrasesText.includes("ambitious");
+      const hasClientComplaint = phrasesText.includes("client") && phrasesText.includes("complaint") && phrasesText.includes("difficult");
+
+      let correctCount = 0;
+      let tips = [];
+
+      if (hasPerformanceIssue && hasTackle) correctCount++;
+      else if (hasPerformanceIssue) tips.push("For 'problema de performance urgente', try: 'We need to tackle this urgent system performance issue.'");
+
+      if (hasCommunicationImprovement && hasTackle) correctCount++;
+      else if (hasCommunicationImprovement) tips.push("For 'melhorar a comunicação interna', consider: 'Let's tackle improving our internal communication.'");
+
+      if (hasSalesTarget && hasTackle) correctCount++;
+      else if (hasSalesTarget) tips.push("For 'objetivo ambicioso de vendas', use: 'We're ready to tackle our ambitious sales target.'");
+
+      if (hasClientComplaint && hasTackle) correctCount++;
+      else if (hasClientComplaint) tips.push("For 'reclamação difícil de cliente', try: 'I will tackle this difficult client complaint personally.'");
+
+      if (!hasTackle) {
+        showFeedback(
+          feedbackId,
+          "Make sure to use 'tackle' (or its forms) in your sentences for each scenario!",
+          "incorrect"
+        );
+        return;
+      }
+
+      if (correctCount === 4) {
+        showFeedback(
+          feedbackId,
+          "Fantástico! You've captured all four scenarios perfectly using 'tackle'. Your understanding is excellent!",
+          "correct"
+        );
+      } else if (correctCount > 0) {
+        showFeedback(
+          feedbackId,
+          `Very good! You've correctly addressed ${correctCount} out of 4 scenarios. Here are some tips for the others: ${tips.join(" ")}`,
+          "tip"
+        );
+      } else {
+        showFeedback(
+          feedbackId,
+          "Keep trying! Remember to use 'tackle' for each situation. Focus on actively addressing the problem or task. " + tips.join(" "),
+          "incorrect"
+        );
+      }
+    }
+  </script>
+</body>
+</html>
